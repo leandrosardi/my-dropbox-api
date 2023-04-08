@@ -37,7 +37,13 @@ After you have performed these steps, you can find a new `/Apps/mysaas-backups`,
 
 All the files and folders managed by **my-dropbox-api** will be scoped to that folder.
 
-## 2. Getting Started
+## 2. Getting ConnectionSphere API Key
+
+1. Signup to ConnectionSphere [here](https://connectionsphere.com/signup).
+
+2. Get your API-KEY [here](https://connectionsphere.com/settings/apikey).
+
+## 3. Getting Started
 
 Install **my-dropbox-api** gem.
 
@@ -51,11 +57,12 @@ Setup **my-dropbox-api** to access DropBox account.
 requires 'my-dropbox-api'
 
 BlackStack::DropBox.set({
+    :connectionsphere_api_key => '118f3c32-c920-******',
     :dropbox_refresh_token => 'dh4UcV4dFVs******',
 })
 ```
 
-## 3. Creating Folders
+## 4. Creating Folders
 
 ```ruby
 # Create a folder
@@ -67,7 +74,7 @@ puts BlackStack::DropBox.dropbox_create_folder('/my-first-folder/my-first-sub-fo
 # => {"metadata": {"name": "my-first-sub-folder", "path_lower": "/my-first-folder/my-first-sub-folder", "path_display": "/my-first-folder/my-first-sub-folder", "id": "id:Vtyvsunm9sMAAAAAAAAACQ"}}
 ```
 
-## 4. Uploading Files
+## 5. Uploading Files
 
 ```ruby
 # Create a local folder
@@ -80,7 +87,7 @@ puts BlackStack::DropBox.dropbox_upload_file('/tmp/my-first-file.txt', '/my-firs
 # => {"name": "my-first-file.txt", "path_lower": "/my-first-folder/my-first-file.txt", "path_display": "/my-first-folder/my-first-file.txt", "id": "id:Vtyvsunm9sMAAAAAAAAACw", "client_modified": "2023-03-25T14:20:36Z", "server_modified": "2023-03-25T14:20:37Z", "rev": "5f7ba36b1776ce01d7d61", "size": 12, "is_downloadable": true, "content_hash": "61f417374f4400b47dcae1a8f402d4f4dacf455a0442a06aa455a447b0d4e170"}
 ```
 
-## 5. Uploading Folder Structures
+## 6. Uploading Folder Structures
 
 Use `BlackStack::DropBox.upload` if you want to upload a folder, with all its sub-folders and files, recusivelly.
 
@@ -104,7 +111,7 @@ puts ret.join("\n")
 # => {:file=>"my-second-file.txt", :type=>"file", :result=>"{\"name\": \"my-second-file.txt\", \"path_lower\": \"/my-second-folder/my-second-sub-folder/my-second-file.txt\", \"path_display\": \"/my-second-folder/my-second-sub-folder/my-second-file.txt\", \"id\": \"id:Vtyvsunm9sMAAAAAAAAAEw\", \"client_modified\": \"2023-03-25T15:17:28Z\", \"server_modified\": \"2023-03-25T15:17:28Z\", \"rev\": \"5f7bb020690c7e01d7d61\", \"size\": 12, \"is_downloadable\": true, \"content_hash\": \"61f417374f4400b47dcae1a8f402d4f4dacf455a0442a06aa455a447b0d4e170\"}"}
 ```
 
-## 6. Getting Download Link of a File
+## 7. Getting Download Link of a File
 
 ```ruby
 # Get download link for a file
@@ -112,11 +119,11 @@ puts BlackStack::DropBox.get_file_url('/.pages/383ff473-b649-4cf0-9090-a41022c8d
 # => https://dl.dropboxusercontent.com/s/9bgveh24fm89v4i/my-first-file.txt?dl=1
 ```
 
-## 7. Advanced: Managing Secret Files of Your Project
+## 8. Advanced: Managing Secret Files of Your Project
 
 _(**WARNING:** This section is pending of documentation)_
 
-## 8. Advanced: Creating Your Own DropbBox App.
+## 9. Advanced: Creating Your Own DropbBox App.
 
 _(**WARNING:** This section has not been tested yet)_
 
