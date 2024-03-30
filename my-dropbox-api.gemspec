@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'my-dropbox-api'
-  s.version     = '1.0.1'
-  s.date        = '2023-04-08'
+  s.version     = '1.0.2'
+  s.date        = '2024-03-30'
   s.summary     = "Ruby gem to manage some basic DropBox operations."
   s.description = "
 The **dropbox-api** is a Ruby gem for managing DropBox uploading, downloading and sharing DropBox files and folders.
