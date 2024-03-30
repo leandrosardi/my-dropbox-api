@@ -7,8 +7,8 @@ module BlackStack
         DROPBOX_APP_KEY = 'lnystcoayzse5at'
         
         # ConnectionSphere API-KEY
-        @@connectionsphere_api_key = nil
-        @@connectionsphere_token_url = 'https://connectionsphere.com/api1.0/dropbox/get_access_token.json'
+        @@vymeco_api_key = nil
+        @@vymeco_token_url = 'http://vymeco.com:3000/api1.0/dropbox-token-helper/get_access_token.json'
         
         # mysaas end-user "refresh-token" to grab a new "access-code" every time is needed.
         @@dropbox_refresh_token = nil
@@ -29,7 +29,7 @@ module BlackStack
         def self.set(h)
             @@dropbox_refresh_token = h[:dropbox_refresh_token]
             @@destinations = h[:destinations]
-            @@connectionsphere_api_key = h[:connectionsphere_api_key]
+            @@vymeco_api_key = h[:vymeco_api_key]
         end # set
 
         # Get a short-live access code using the refresh token.
@@ -40,10 +40,10 @@ module BlackStack
             # get the refresh token
             begin
                 params = {
-                  'api_key' => "#{@@connectionsphere_api_key}",
+                  'api_key' => "#{@@vymeco_api_key}",
                   'refresh_token' => "#{@@dropbox_refresh_token}"
                 }
-                res = BlackStack::Netting::call_post(@@connectionsphere_token_url, params)
+                res = BlackStack::Netting::call_post(@@vymeco_token_url, params)
                 h = JSON.parse(res.body)
                 raise h['status'] if h['status']!='success'
 

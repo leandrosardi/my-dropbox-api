@@ -57,7 +57,7 @@ Setup **my-dropbox-api** to access DropBox account.
 requires 'my-dropbox-api'
 
 BlackStack::DropBox.set({
-    :connectionsphere_api_key => '118f3c32-c920-******',
+    :vymeco_api_key => '118f3c32-c920-******',
     :dropbox_refresh_token => 'dh4UcV4dFVs******',
 })
 ```

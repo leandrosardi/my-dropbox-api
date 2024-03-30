@@ -3,7 +3,7 @@ require_relative '../lib/my-dropbox-api' # switch to this line when you are work
 
 # Create a new client
 BlackStack::DropBox.set({
-    :connectionsphere_api_key => '<your connectionsphere api key here>',
+    :vymeco_api_key => '<your connectionsphere api key here>',
     :dropbox_refresh_token => '<your refresh token here>',
 })
 
