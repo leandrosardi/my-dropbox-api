@@ -3,8 +3,13 @@
 
 #### Why Not Amazon S3?
 
-**Cost Considerations:** Even if S3 can handle the load, keep in mind that increased operations may lead to higher costs. Amazon charges per API request, and high volumes of upload operations will raise your expenses.
+**Cost Considerations:** Even if S3 is more suitable for programming, keep in mind that increased operations may lead to higher costs. Amazon charges per API request, and high volumes of upload operations will raise your expenses.
 
+Dropbox doesn't charges per API call, but manages an API call rate. 
+
+The `my-dropbox-api` manages the files uploading asyncroniously to meet with a rate-limit, and keep your costs low at the same time!
+
+**THIS LIBRARY IS UNDER CONSTRUCTION**
 
 # my-dropbox-api
 
