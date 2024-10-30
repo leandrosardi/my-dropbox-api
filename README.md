@@ -1,5 +1,11 @@
 ![GitHub issues](https://img.shields.io/github/issues/leandrosardi/my-dropbox-api) ![GitHub](https://img.shields.io/github/license/leandrosardi/my-dropbox-api) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/leandrosardi/my-dropbox-api) ![GitHub last commit](https://img.shields.io/github/last-commit/leandrosardi/my-dropbox-api)
 
+
+#### Why Not Amazon S3?
+
+**Cost Considerations:** Even if S3 can handle the load, keep in mind that increased operations may lead to higher costs. Amazon charges per API request, and high volumes of upload operations will raise your expenses.
+
+
 # my-dropbox-api
 
 The **my-dropbox-api** is a Ruby gem for managing DropBox uploading, downloading and sharing DropBox files and folders.
