@@ -8,7 +8,7 @@ module BlackStack
         
         # ConnectionSphere API-KEY
         @@vymeco_api_key = nil
-        @@vymeco_token_url = 'http://vymeco.com:3000/api1.0/dropbox-token-helper/get_access_token.json'
+        @@vymeco_token_url = 'http://massprospecting.com:3000/api1.0/dropbox-token-helper/get_access_token.json'
         
         # mysaas end-user "refresh-token" to grab a new "access-code" every time is needed.
         @@dropbox_refresh_token = nil
